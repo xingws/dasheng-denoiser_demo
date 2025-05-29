@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Efficient Speech Enhancement via Embeddings from Pre-trained Generative Audioencoders</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="css/bulma-slider.min.css">
+  <link rel="stylesheet" href="css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="js/fontawesome.all.min.js"></script>
+  <script src="js/bulma-carousel.min.js"></script>
+  <script src="js/bulma-slider.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Efficient Speech Enhancement via Embeddings from Pre-trained Generative Audioencoders</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"> Xingwei Sun, Heinrich Dinkel, Yadong Niu, Linzhang Wang, Junbo Zhang, Jian Luan<br></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">MiLM Plus, Xiaomi Inc., China<br></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!--                   Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/xiaomi-research/dasheng_denoise" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+                </span>
+                <!--                   ArXiv Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent research has delved into speech enhancement (SE) approaches that leverage audio embeddings from pre-trained models, diverging from time-frequency masking or signal prediction techniques. This paper introduces an efficient and extensible SE method. Our approach involves initially extracting audio embeddings from noisy speech using a pre-trained audioencoder, which are then denoised by a compact encoder network. Subsequently, a vocoder synthesizes the clean speech from denoised embeddings. An ablation study substantiates the parameter efficiency of the denoise encoder with a pre-trained audioencoder and vocoder. Experimental results on both speech enhancement and speaker fidelity demonstrate that our generative audioencoder-based SE system outperforms models utilizing discriminative audioencoders. Furthermore, subjective listening tests validate that our proposed system surpasses an existing state-of-the-art SE model in terms of perceptual quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<br>
+<section class="hero">
+  <table align = "center" style="text-align: center;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-centered">
+          <h2 class="title is-4">I. Audio Samples of DNS Dataset</h2>
+        </div>
+      </div>
+    </div>
+    <tr>
+      <td style="text-align: center; width: 100px;"><b></b></th>
+      <td style="text-align: center;"><b>Noisy</b></th>
+      <td style="text-align: center;"><b>Clean</b></th>
+      <td style="text-align: center;"><b>DEMUCS</b></th>
+      <td style="text-align: center;"><b>LMS</b></th>
+      <td style="text-align: center;"><b>Whisper</b></th>
+      <td style="text-align: center;"><b>WavLM</b></th>
+      <td style="text-align: center;"><b>Dasheng</b></th>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"></td>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clean_fileid_44.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_enhanced.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_logmel_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_whisper_small_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_wavlm_msbase_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_dasheng_base_ese.png" width="250px" height="128px"></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 1</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_44.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_logmel_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clean_fileid_167.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_enhanced.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_logmel_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_whisper_small_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_wavlm_msbase_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_dasheng_base_ese.png" width="250px" height="128px"></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 2</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_167.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_logmel_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clean_fileid_277.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_enhanced.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_logmel_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_whisper_small_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_wavlm_msbase_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_dasheng_base_ese.png" width="250px" height="128px"></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 3</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_277.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_logmel_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"></td>
+      <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clean_fileid_300.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_enhanced.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_logmel_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_whisper_small_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_wavlm_msbase_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_dasheng_base_ese.png" width="250px" height="128px"></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 4</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_300.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_logmel_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+    <br>
+
+  <table align = "center" style="text-align: center;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-centered">
+          <h2 class="title is-4">II. Audio Samples of real-recorded Dataset</h2>
+        </div>
+      </div>
+    </div>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"></td>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 1</b></td>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 2</b></td>
+    </tr>
+    
+    <tr>
+      <td style="text-align: center;"></th>
+      <td><img src="demo/imags/record/ns_6_mic_noisy.png" width="570px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_noisy.png" width="877px" height="50px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Noisy</b></td>
+      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_mic_noisy.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_noisy.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center;"></th>
+      <td><img src="demo/imags/record/ns_6_enhanced.png" width="570px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_enhanced.png" width="877px" height="50px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>DEMUCS  </b></td>
+      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_enhanced.wav" type="audio/wav"></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"></th>
+      <td><img src="demo/imags/record/ns_6_whisper_small_ese.png" width="570px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_whisper_small_ese.png" width="877px" height="50px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Whisper</b></td>
+      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_whisper_small_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"></th>
+      <td><img src="demo/imags/record/ns_6_wavlm_msbase_ese.png" width="570px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_wavlm_msbase_ese.png" width="877px" height="50px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>WavLM</b></td>
+      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: center;"></th>
+      <td><img src="demo/imags/record/ns_6_dasheng_base_ese.png" width="570px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_dasheng_base_ese.png" width="877px" height="50px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Dasheng</b></td>
+      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+  </table>  
+</section>
+
+<hr>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{xingwei2025dashengdenoise,
+        title={Efficient Speech Enhancement via Embeddings from Pre-trained Generative Audioencoders},
+        author={Xingwei Sun, Heinrich Dinkel, Yadong Niu, Linzhang Wang, Junbo Zhang, Jian Luan},
+        booktitle={Interspeech 2025},
+        year={2025}
+      }</code></pre>
+    <pre><code>@article{xingwei2025dashengdenoise,
+      title={Efficient Speech Enhancement via Embeddings from Pre-trained Generative Audioencoders},
+        author={Xingwei Sun, Heinrich Dinkel, Yadong Niu, Linzhang Wang, Junbo Zhang, Jian Luan},
+      journal={arXiv preprint arXiv},
+      year={2025}
+    }</code></pre>
+  </div>
+</section>
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+</html>
