@@ -87,6 +87,27 @@
 </section>
 <!-- End paper abstract -->
 
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            The samples listed below are processed by different models referred as:<br>
+            <b>Noisy</b>: the original noisy speech. <br>
+            <b>Clean</b>: the clean speech. <br>
+            <b>DEMUCS</b>: the denoised speech from the open-sourced demucs model. <br>
+            <b>LMS</b>: the denoised speech from proposed method using log-Mel spectrogram as hand-crafted embedding.<br>
+            <b>Whisper</b>: the denoised speech from proposed method using Whisper as pre-trained audioencoder. <br>
+            <b>WavLM</b>: the denoised speech from proposed method using WavLM as pre-trained audioencoder. <br>
+            <b>Dasheng</b>: the denoised speech from proposed method using Dasheng as pre-trained audioencoder. <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <br>
 <section class="hero">
   <table align = "center" style="text-align: center;">
@@ -97,104 +118,122 @@
         </div>
       </div>
     </div>
+    
+    
     <tr>
       <td style="text-align: center; width: 100px;"><b></b></th>
-      <td style="text-align: center;"><b>Noisy</b></th>
-      <td style="text-align: center;"><b>Clean</b></th>
-      <td style="text-align: center;"><b>DEMUCS</b></th>
-      <td style="text-align: center;"><b>LMS</b></th>
-      <td style="text-align: center;"><b>Whisper</b></th>
-      <td style="text-align: center;"><b>WavLM</b></th>
-      <td style="text-align: center;"><b>Dasheng</b></th>
+      <td style="text-align: center;"><b>Sample 1</b></th>
+      <td style="text-align: center;"><b>Sample 2</b></th>
+      <td style="text-align: center;"><b>Sample 3</b></th>
+      <td style="text-align: center;"><b>Sample 4</b></th>
     </tr>
 
     <tr>
-      <td style="text-align: center; width: 100px;"></td>
+      <td style="text-align: center; width: 100px;"><b></b></th>
       <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clean_fileid_44.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_enhanced.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_logmel_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_whisper_small_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_wavlm_msbase_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_dasheng_base_ese.png" width="250px" height="128px"></td>
-    </tr>
-
-    <tr>
-      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 1</b></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_44.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_enhanced.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_logmel_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_whisper_small_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_dasheng_base_ese.wav" type="audio/wav"></audio></td>
-    </tr>
-
-    <tr>
-      <td style="text-align: center; width: 100px;"></td>
       <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clean_fileid_167.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_enhanced.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_logmel_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_whisper_small_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_wavlm_msbase_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_dasheng_base_ese.png" width="250px" height="128px"></td>
-    </tr>
-
-    <tr>
-      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 2</b></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_167.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_enhanced.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_logmel_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_whisper_small_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_dasheng_base_ese.wav" type="audio/wav"></audio></td>
-    </tr>
-
-    <tr>
-      <td style="text-align: center; width: 100px;"></td>
       <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clean_fileid_277.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_enhanced.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_logmel_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_whisper_small_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_wavlm_msbase_ese.png" width="250px" height="128px"></td>
-      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_dasheng_base_ese.png" width="250px" height="128px"></td>
-    </tr>
-
-    <tr>
-      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 3</b></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_277.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_enhanced.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_logmel_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_whisper_small_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_dasheng_base_ese.wav" type="audio/wav"></audio></td>
-    </tr>
-
-    <tr>
-      <td style="text-align: center; width: 100px;"></td>
       <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300.png" width="250px" height="128px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Noisy</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"><b></b></th>
+      <td><img src="demo/imags/DNS1/clean_fileid_44.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clean_fileid_167.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clean_fileid_277.png" width="250px" height="128px"></td>
       <td><img src="demo/imags/DNS1/clean_fileid_300.png" width="250px" height="128px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Clean</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_44.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_167.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_277.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_300.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"><b></b></th>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_enhanced.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_enhanced.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_enhanced.png" width="250px" height="128px"></td>
       <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_enhanced.png" width="250px" height="128px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>DEMUCS</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_enhanced.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"><b></b></th>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_logmel_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_logmel_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_logmel_ese.png" width="250px" height="128px"></td>
       <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_logmel_ese.png" width="250px" height="128px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>LMS</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_logmel_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_logmel_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_logmel_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_logmel_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"><b></b></th>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_whisper_small_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_whisper_small_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_whisper_small_ese.png" width="250px" height="128px"></td>
       <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_whisper_small_ese.png" width="250px" height="128px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Whisper</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_whisper_small_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; width: 100px;"><b></b></th>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_wavlm_msbase_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_wavlm_msbase_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_wavlm_msbase_ese.png" width="250px" height="128px"></td>
       <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_wavlm_msbase_ese.png" width="250px" height="128px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>WavLM</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+    </tr>
+  
+    <tr>
+      <td style="text-align: center; width: 100px;"><b></b></th>
+      <td><img src="demo/imags/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_dasheng_base_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_dasheng_base_ese.png" width="250px" height="128px"></td>
+      <td><img src="demo/imags/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_dasheng_base_ese.png" width="250px" height="128px"></td>
       <td><img src="demo/imags/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_dasheng_base_ese.png" width="250px" height="128px"></td>
     </tr>
-
     <tr>
-      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Sample 4</b></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clean_fileid_300.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_enhanced.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_logmel_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_whisper_small_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Dasheng</b></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp17_birds_413745_3_snr2_tl-23_fileid_44_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp51_baby_416672_0_snr11_tl-22_fileid_167_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp47_fan_out_83867_5_snr4_tl-34_fileid_277_dasheng_base_ese.wav" type="audio/wav"></audio></td>
       <td><audio controls="" style='display: inline-block; width: 250px; height: 50px;'><source src="demo/wavs/DNS1/clnsp57_bus_84241_3_snr2_tl-30_fileid_300_dasheng_base_ese.wav" type="audio/wav"></audio></td>
     </tr>
+
+
     <br>
 
   <table align = "center" style="text-align: center;">
@@ -213,54 +252,54 @@
     
     <tr>
       <td style="text-align: center;"></th>
-      <td><img src="demo/imags/record/ns_6_mic_noisy.png" width="570px" height="50px"></td>
-      <td><img src="demo/imags/record/ns_7_pub_wind_mic_noisy.png" width="877px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_6_mic_noisy.png" width="456px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_noisy.png" width="702px" height="50px"></td>
     </tr>
     <tr>
       <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Noisy</b></td>
-      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_mic_noisy.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_noisy.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 456px; height: 50px;'><source src="demo/wavs/record/ns_6_mic_noisy.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 702px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_noisy.wav" type="audio/wav"></audio></td>
     </tr>
 
     <tr>
       <td style="text-align: center;"></th>
-      <td><img src="demo/imags/record/ns_6_enhanced.png" width="570px" height="50px"></td>
-      <td><img src="demo/imags/record/ns_7_pub_wind_mic_enhanced.png" width="877px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_6_enhanced.png" width="456px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_enhanced.png" width="702px" height="50px"></td>
     </tr>
     <tr>
       <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>DEMUCS  </b></td>
-      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_enhanced.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 456px; height: 50px;'><source src="demo/wavs/record/ns_6_enhanced.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 702px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_enhanced.wav" type="audio/wav"></audio></td>
     </tr>
     <tr>
       <td style="text-align: center;"></th>
-      <td><img src="demo/imags/record/ns_6_whisper_small_ese.png" width="570px" height="50px"></td>
-      <td><img src="demo/imags/record/ns_7_pub_wind_mic_whisper_small_ese.png" width="877px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_6_whisper_small_ese.png" width="456px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_whisper_small_ese.png" width="702px" height="50px"></td>
     </tr>
     <tr>
       <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Whisper</b></td>
-      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_whisper_small_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 456px; height: 50px;'><source src="demo/wavs/record/ns_6_whisper_small_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 702px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_whisper_small_ese.wav" type="audio/wav"></audio></td>
     </tr>
     <tr>
       <td style="text-align: center;"></th>
-      <td><img src="demo/imags/record/ns_6_wavlm_msbase_ese.png" width="570px" height="50px"></td>
-      <td><img src="demo/imags/record/ns_7_pub_wind_mic_wavlm_msbase_ese.png" width="877px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_6_wavlm_msbase_ese.png" width="456px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_wavlm_msbase_ese.png" width="702px" height="50px"></td>
     </tr>
     <tr>
       <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>WavLM</b></td>
-      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 456px; height: 50px;'><source src="demo/wavs/record/ns_6_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 702px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_wavlm_msbase_ese.wav" type="audio/wav"></audio></td>
     </tr>
     <tr>
       <td style="text-align: center;"></th>
-      <td><img src="demo/imags/record/ns_6_dasheng_base_ese.png" width="570px" height="50px"></td>
-      <td><img src="demo/imags/record/ns_7_pub_wind_mic_dasheng_base_ese.png" width="877px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_6_dasheng_base_ese.png" width="456px" height="50px"></td>
+      <td><img src="demo/imags/record/ns_7_pub_wind_mic_dasheng_base_ese.png" width="702px" height="50px"></td>
     </tr>
     <tr>
       <td style="text-align: center; width: 100px; height: 50px; line-height: 50px;"><b>Dasheng</b></td>
-      <td><audio controls="" style='display: inline-block; width: 570px; height: 50px;'><source src="demo/wavs/record/ns_6_dasheng_base_ese.wav" type="audio/wav"></audio></td>
-      <td><audio controls="" style='display: inline-block; width: 877px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 456px; height: 50px;'><source src="demo/wavs/record/ns_6_dasheng_base_ese.wav" type="audio/wav"></audio></td>
+      <td><audio controls="" style='display: inline-block; width: 702px; height: 50px;'><source src="demo/wavs/record/ns_7_pub_wind_mic_dasheng_base_ese.wav" type="audio/wav"></audio></td>
     </tr>
   </table>  
 </section>
@@ -275,12 +314,6 @@
         booktitle={Interspeech 2025},
         year={2025}
       }</code></pre>
-    <pre><code>@article{xingwei2025dashengdenoise,
-      title={Efficient Speech Enhancement via Embeddings from Pre-trained Generative Audioencoders},
-        author={Xingwei Sun, Heinrich Dinkel, Yadong Niu, Linzhang Wang, Junbo Zhang, Jian Luan},
-      journal={arXiv preprint arXiv},
-      year={2025}
-    }</code></pre>
   </div>
 </section>
 <!-- Statcounter tracking code -->
